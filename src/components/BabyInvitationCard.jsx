@@ -15,9 +15,9 @@ import {
 export function BabyInvitationCard({ onOpenRsvp: _onOpenRsvp, guestName = '' }) {
   const [_copiedAddress, setCopiedAddress] = useState(false);
 
-  // Dynamic real-time countdown to Sunday, 1st November 2026, 1:30 PM IST
+  // Dynamic real-time countdown to Sunday, 1st November 2026, 1:40 PM IST
   const calculateTimeLeft = () => {
-    const targetDate = new Date('2026-11-01T13:30:00+05:30').getTime();
+    const targetDate = new Date('2026-11-01T13:40:00+05:30').getTime();
     const now = new Date().getTime();
     const difference = targetDate - now;
 
@@ -52,7 +52,7 @@ export function BabyInvitationCard({ onOpenRsvp: _onOpenRsvp, guestName = '' }) 
     const greeting = guestName ? `Dear ${guestName},\n\n` : '';
     const text = encodeURIComponent(
       `${greeting}👶 Warm Invitation to our Baby's Naamkaran & Cradle Ceremony (नामकरण सोहळा)!\n\n` +
-      `📅 Date: Sunday, 1st November 2026 | 1:30 PM Onwards\n` +
+      `📅 Date: Sunday, 1st November 2026 | 1:40 PM Onwards\n` +
       `🏛️ Venue: Venkateshwara MultiPurpose Hall, Solapur\n\n` +
       `📍 Google Maps Location:\n${VENUE_DATA.googleMapsUrl}\n\n` +
       `We look forward to your gracious presence and blessings! 🙏`
@@ -66,7 +66,7 @@ export function BabyInvitationCard({ onOpenRsvp: _onOpenRsvp, guestName = '' }) 
       "Auspicious Baby Naming & Cradle Ceremony followed by festive Mahaprasad Lunch at Venkateshwara MultiPurpose Hall."
     );
     const location = encodeURIComponent(VENUE_DATA.fullAddress);
-    const gCalUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${title}&details=${details}&location=${location}&dates=20261101T080000Z/20261101T123000Z`;
+    const gCalUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${title}&details=${details}&location=${location}&dates=20261101T081000Z/20261101T124000Z`;
     window.open(gCalUrl, '_blank');
   };
 
@@ -330,7 +330,7 @@ export function BabyInvitationCard({ onOpenRsvp: _onOpenRsvp, guestName = '' }) 
                     <div className="flex items-center gap-3 mt-3">
                       <Clock className="w-5 h-5 text-[#7A283C] shrink-0" />
                       <span className="text-sm text-[#5C4549]">
-                        Auspicious Muhurat: 1:30 PM Onwards
+                        Auspicious Muhurat: 1:40 PM Onwards
                       </span>
                     </div>
                     {/* <button
